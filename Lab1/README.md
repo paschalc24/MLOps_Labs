@@ -1,0 +1,1 @@
+In this lab I changed the Iris dataset to the CIFAR-10 dataset. I also updated the model to be a CNN classifier and the streamlit dashboard to uphold image uploads.
