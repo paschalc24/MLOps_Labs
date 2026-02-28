@@ -3,7 +3,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 # from airflow.providers.standard.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from src.lab import load_data, data_preprocessing, build_save_model, load_model_elbow
+from src.lab import load_data, data_preprocessing, build_save_model, load_model
 
 # NOTE:
 # In Airflow 3.x, enabling XCom pickling should be done via environment variable:
@@ -12,7 +12,7 @@ from src.lab import load_data, data_preprocessing, build_save_model, load_model_
 
 # Define default arguments for your DAG
 default_args = {
-    'owner': 'your_name',
+    'owner': 'Paschal Corrigan',
     'start_date': datetime(2025, 1, 15),
     'retries': 0,  # Number of retries in case of task failure
     'retry_delay': timedelta(minutes=5),  # Delay before retries
@@ -22,7 +22,7 @@ default_args = {
 with DAG(
     'Airflow_Lab1',
     default_args=default_args,
-    description='Dag example for Lab 1 of Airflow series',
+    description='Random forest classifier on Iris dataset',
     catchup=False,
 ) as dag:
 
@@ -43,14 +43,14 @@ with DAG(
     build_save_model_task = PythonOperator(
         task_id='build_save_model_task',
         python_callable=build_save_model,
-        op_args=[data_preprocessing_task.output, "model.sav"],
+        op_args=[data_preprocessing_task.output, "iris_classifier.sav"],
     )
 
-    # Task to load a model using the 'load_model_elbow' function, depends on 'build_save_model_task'
+    # Task to load a model using the 'load_model' function, depends on 'build_save_model_task'
     load_model_task = PythonOperator(
         task_id='load_model_task',
-        python_callable=load_model_elbow,
-        op_args=["model.sav", build_save_model_task.output],
+        python_callable=load_model,
+        op_args=["iris_classifier.sav", build_save_model_task.output],
     )
 
     # Set task dependencies
