@@ -7,3 +7,7 @@
 venv/
 
 *.env
+*.log
+*.sav
+
+latest
