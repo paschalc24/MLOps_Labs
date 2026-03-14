@@ -1,0 +1,21 @@
+Species: setosa
+Avg Sepal Length = 5.01 cm
+Avg Sepal Width = 3.43 cm
+Avg Petal Length = 0.25 cm
+Avg Petal Width = 0.25 cm
+Petal Length Range = 1.0 - 1.9 cm
+Samples = 50
+Species: versicolor
+Avg Sepal Length = 5.94 cm
+Avg Sepal Width = 2.77 cm
+Avg Petal Length = 1.33 cm
+Avg Petal Width = 1.33 cm
+Petal Length Range = 3.0 - 5.1 cm
+Samples = 50
+Species: virginica
+Avg Sepal Length = 6.59 cm
+Avg Sepal Width = 2.97 cm
+Avg Petal Length = 2.03 cm
+Avg Petal Width = 2.03 cm
+Petal Length Range = 4.5 - 6.9 cm
+Samples = 50
