@@ -5,7 +5,7 @@
 /Lab1/FLASK_GCP_LAB/src/data/cifar-10-batches-py/
 /Lab1/FLASK_GCP_LAB/src/data/cifar-10-python.tar.gz
 venv/
-
+.venv/
 *.env
 *.log
 *.sav

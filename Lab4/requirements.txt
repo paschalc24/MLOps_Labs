@@ -1,0 +1,3 @@
+ipykernel
+apache_beam
+pandas<2.2
