@@ -7,7 +7,7 @@ In this Lab I wrote a new pipeline to compute per species statistics for the Iri
 2. Create a new virtual environment with `python3.11 -m venv .venv`
 3. Install dependencies `pip install -r requirements.txt`
 4. Open the jupyter notebook and select this environment as the python kernel
-5. Run cell in order  
+5. Run cells in order  
 
 ## Pipeline Overview
 
